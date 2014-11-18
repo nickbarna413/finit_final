@@ -33,13 +33,9 @@ mysqli_close($mysqli);
     
     	<ul>
         
-        	<li><a href="#userInfo">User Information</a></li>
+        	<li><a href="client.php">User Information</a></li>
             
-            <li><a href="#billingInfo">Billing Information</a></li>
-            
-            <li><a href="#orderInfo">My Orders</a></li>
-            
-            <li><a href="#cancelAccount">Cancel Account</a></li>
+            <li><a href="client.php#billingInfo">Update User Info</a></li>
     
     	</ul>
     </nav>		<!--end of user nav-->
