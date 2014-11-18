@@ -1,14 +1,15 @@
-<?php // Require the configuration before any PHP code as the configuration controls error reporting:
-require('./includes/config.php')	
-?>
-<!DOCTYPE html>
-<html>
-<head>
-<title>Register</title>
-</head>
+<?php include 'includes/head.php' ?>
 
-<body style="font-family: verdan, sans-serif;">
-	<?php
+<!DOCTYPE html>
+
+<body id="login">
+
+<?php include 'includes/header.php' ?>
+
+<main class="global-width group section">
+
+
+<?php
 
 	// For storing registration errors:
 	$reg_errors = array();
@@ -108,27 +109,31 @@ require('./includes/config.php')
 }
 }
 ?>
-<div id="pageWrap">
-	<div style="width: 80%; padding: 5px 15px; border: 1px solid #e3e3e3; margin: auto;" id="pageHeader">
-			<h1>Register</h1>
-			<br />
-			<form action="register.php" method="post">
-				<div class="formWrap">
+
+			<h1 class="h1">Register</h1>
+			
+			<form action="register.php" method="post" class="login">
+				
 					<input type="text" placeholder="Name" name="name" class="field">
-					<br />
+					
 					<input type="text" placeholder="Username" name="username" class="field">
-					<br />
+					
 					<input type="email" placeholder="Email" name="email" class="field">
-					<br />
-					<input type="password" placeholder="Password" name="password1" class="field"><br />
-					<span class="help-block">Must be at least 6 characters long, with at least one lowercase letter, one uppercase letter, and one number.</span>
-					<br />
+					
+					<input type="password" placeholder="Password" name="password1" class="field">
+					<span class="help-block embiggen">Must be at least 6 characters long, with at least one lowercase letter, one uppercase letter, and one number.</span>
+				
 					<input type="password" placeholder="Confirm Password" name="password2" class="field">
-					<br />
-					<input type="submit" value="Register" name="register" class="formSubmit">
-				</div>
+					
+					<input type="submit" value="Register" name="register" class="formSubmit admin-button">
+			
 			</form>
-		  </div>
-		</div>
-	</body>
+</main>	<!--end of wrapper-->
+
+<?php include 'includes/footer.php' ?>
+
+
+
+</body>
+
 </html>

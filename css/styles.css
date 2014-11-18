@@ -471,3 +471,7 @@ h2.embiggen-more {
 #login main .h3 {
 	padding: 1%; margin-top: 0;
 }
+
+.help-block {
+	margin-bottom: 18px; display: block;
+}
