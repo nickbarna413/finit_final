@@ -64,7 +64,6 @@
             <li class="col span_1_of_8"><a href="contact.php">Contact</a></li>
             <li class="col span_1_of_8"><a class="image-replace cart-icon" href="cart.php">Cart</a></li>
 
-    
     	</ul>
         
     </nav>		<!--end of main nav-->	
