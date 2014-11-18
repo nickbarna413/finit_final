@@ -1,20 +1,17 @@
 <?php 
 include 'includes/head.php';
-include 'php/config.inc.php'; ?>
+include 'php/config.inc.php'; 
 
-<!DOCTYPE html>
+echo "<!DOCTYPE html>";
 
-<?php include 'includes/head.php' ?>
-
-
-<body id="login">
-
-<?php include 'includes/header.php' ?>
-
-<main class="global-width group section">
+include 'includes/head.php';
 
 
-<?php
+echo "<body id='login'>";
+
+include 'includes/header.php';
+
+echo '<main class="global-width group section">';
 
 	// For storing registration errors:
 	$reg_errors = array();

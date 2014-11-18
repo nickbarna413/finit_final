@@ -1,4 +1,5 @@
-<?php include 'php/config.inc.php'; 
+<?php session_start();
+include 'php/config.inc.php'; 
 
 echo '<!DOCTYPE html>
 <html>
