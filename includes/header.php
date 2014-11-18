@@ -1,7 +1,5 @@
 <header>
-	
- 
-	
+
     <section class="contrast fixed">
     
 		<section class="section group global-width">

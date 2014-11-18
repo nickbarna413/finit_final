@@ -1,8 +1,9 @@
-<?php session_start();
+<?php include 'includes/head.php';
+
 include 'php/config.inc.php'; ?>
 
 
-<?php include 'includes/head.php' ?>
+
 
 <body id="cart">
 

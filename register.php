@@ -1,5 +1,6 @@
-<?php include 'includes/head.php' ?>
-
+<?php 
+include 'includes/head.php';
+include 'php/config.inc.php'; ?>
 <!DOCTYPE html>
 
 <body id="login">
@@ -57,9 +58,16 @@
 
 		$rows = mysqli_num_rows($request);
 	
+		function generateHash($password){
+			if (defined("CRYPT_BLOWFISH") && CRYPT_BLOWFISH){
+				$salt = '$2y$11$'.substr(md5($password),0,22);
+				return crypt($password, $salt);
+			}
+		}
+
 		// meaning that the entered username and email don't yet exist so they can be used.
 		if ($rows === 0){
-			$query = "INSERT INTO users (username, email, password, name, date_expires) VALUES ('$username', '$email', '"  .  password_hash($password, PASSWORD_BCRYPT) .  "', '$name', SUBDATE(NOW(), INTERVAL 1 DAY) )" ; 
+			$query = "INSERT INTO users (username, email, password, name, date_expires) VALUES ('$username', '$email', '"  .  generateHash($password) .  "', '$name', SUBDATE(NOW(), INTERVAL 1 DAY) )" ; 
 			$query2 = "INSERT INTO customer (username, name, email) VALUES ('$username','$name','$email')";
 			$request = mysqli_query($mysqli, $query);
 			$request2 = mysqli_query($mysqli, $query2);

@@ -1,4 +1,5 @@
-<?php include 'includes/head.php' ?>
+<?php include 'includes/head.php';
+include 'php/config.inc.php'; ?>
 
 <!DOCTYPE html>
 
@@ -43,7 +44,7 @@ $_SESSION['user_admin'] = true;
 
 		// Validate the email address:
 		if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-			$email = $mysqli->real_escape_string($_POST['email']);
+			$email = mysqli_real_escape_string($mysqli, $_POST['email']);
 		} else {
 			$login_errors['email'] = 'Please enter a valid email address!';
 		}
@@ -79,7 +80,20 @@ $_SESSION['user_admin'] = true;
 
 				//$pass = password_hash($password, PASSWORD_BCRYPT);
 
-				$result = password_verify($password, $row['password']);
+
+				function generateHash($password){
+				if (defined("CRYPT_BLOWFISH") && CRYPT_BLOWFISH){
+						$salt = '$2y$11$'.substr(md5($password),0,22);
+						return crypt($password, $salt);
+					}//uniqid(rand(),true)
+				}
+				if(generateHash($password) ==  $row['password']){
+					$result = true;
+				}
+				else{
+					$result = false;
+				}
+
 				
 				
 				
@@ -98,33 +112,34 @@ $_SESSION['user_admin'] = true;
 						$_SESSION['user_admin'] = true;
 						//echo 'username '. $_SESSION['username'];
 						header('location: http://localhost:8888/DIG4530/versionA/admin.php', true);
-						}
-
-					
-						// Store the data in a session:
-						$_SESSION['user_id'] = $row['id'];
-						$_SESSION['username'] = $row['username'];
-						$_SESSION['user_admin'] = $row['type'];
-						//echo 'username '. $_SESSION['username'];
-						header('location: client.php', true);
-						
 					}
 
-				else { // Right email address, invalid password.
+					
+					// Store the data in a session:
+					$_SESSION['user_id'] = $row['id'];
+					$_SESSION['username'] = $row['username'];
+					$_SESSION['user_admin'] = $row['type'];
+					//echo 'username '. $_SESSION['username'];
+					header('location: client.php', true);
+					echo 'HEY IT WORKS';
+						
+				}else { // Right email address, invalid password.
 					$login_errors['login'] = 'The password does not match that on file.';
 						foreach ($login_errors as $error => $x) {
 						echo 'Error: '.$x;
 						echo '<br />';
+						}
+						//echo $row['password']."<br>".generateHash($password);
 					}
+					
 				}
-
-			}
 			else { // Right password wrong email.
 				$login_errors['login'] = 'The email address is wrong';
 				foreach ($login_errors as $error => $x) {
 					echo 'Error: '.$x;
 					echo '<br />';
 				}
+				
 			}
 		}
 
@@ -133,6 +148,7 @@ $_SESSION['user_admin'] = true;
 				echo 'Error: '.$x;
 				echo '<br />';
 			}
+			
 		}
 
 	}
