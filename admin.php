@@ -4,16 +4,7 @@
 
 <body id="admin">
 
-<?php include 'includes/header.php';
-    if ($_SESSION['user_admin'] != 'admin') {
-        //$url = $protocol . BASE_URL . $destination; // Define the URL.
-        //header("Location: http://localhost/finit/index.php", true);
-        echo '<h1 style="text-align: center; color: #222;">You do not have permission to view this page<button><a href="home_page.php" style="color: #222;">Back</a></button></h1>';
-        exit(); // Quit the script.
-    }
-
-
-?> 
+<?php include 'includes/header.php'; ?> 
 
 
 <main class="global-width section group">
@@ -274,8 +265,6 @@
 </main>	<!--end of wrapper-->
 
 <?php include 'includes/footer.php' ?>
-
-
 
 </body>
 
