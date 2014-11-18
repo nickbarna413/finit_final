@@ -88,7 +88,7 @@ include 'php/config.inc.php'; ?>
 	    
         
         </table>
-        <a href="clear_cart.php" style="color:cornflowerblue">Clear Cart</a>
+        <a href="clear_cart.php" class="admin-button embiggen">Clear Cart</a>
         <form action="checkout.php">
         
         	<input type="submit" class="admin-button" name="cartSubmit" value="Check Out" />
