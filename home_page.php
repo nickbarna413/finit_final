@@ -1,5 +1,4 @@
-<?php $con=mysqli_connect("localhost","root","root","finit");
-//$con=mysqli_connect("localhost","root","","finit"); ?>
+<?php include 'php/config.inc.php'; ?>
 
 <?php
 
@@ -8,10 +7,10 @@ if ( mysqli_connect_errno() ) {
       echo "Failed to connect to MySQL: " . mysqli_connect_error();
     }
 
-    $result = mysqli_query($con,"SELECT * FROM products WHERE id = '3'");
+    $result = mysqli_query($mysqli,"SELECT * FROM product WHERE id = '3'");
 
 
-    mysqli_close($con);
+    mysqli_close($mysqli);
 ?> 
 <!DOCTYPE html>
 
@@ -196,9 +195,9 @@ if ( mysqli_connect_errno() ) {
       
                     echo "<h3 class=\"h3\">" . $row['name'] . "</h3>";
                     
-                    echo "<img class=\"liquid-image\" src='" . $row['productimage'] . "' alt=\"Grandmas Wallpaper\" />";
+                    echo "<img class=\"liquid-image\" src='" . $row['thumb'] . "' alt=\"Grandmas Wallpaper\" />";
          
-                    echo "<div class=\"featured-price\">$" . $row['price'] . ".99</div>";
+                    echo "<div class=\"featured-price\">$" . $row['price'] . "</div>";
                 
                 }
                 
