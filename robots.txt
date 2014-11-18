@@ -1,0 +1,9 @@
+User-Agent: *
+Disallow: 
+Disallow: /css/
+Disallow: /data1/
+Disallow: /engine1/
+Disallow: /img/
+Disallow: /js/
+Disallow: /mockups/
+Disallow: /slides/

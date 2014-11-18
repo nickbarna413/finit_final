@@ -1,4 +1,5 @@
-<?php $con=mysqli_connect("localhost","root","","finit"); ?>
+<?php $con=mysqli_connect("localhost","root","root","finit");
+//$con=mysqli_connect("localhost","root","","finit"); ?>
 
 <?php
 
@@ -14,6 +15,7 @@ mysqli_close($con);
 ?> 
 <!DOCTYPE html>
 
+<?php //include 'includes/header.php'; ?> 
 <head>
 
 	<meta charset="utf-8">
@@ -65,9 +67,6 @@ mysqli_close($con);
 </head>
 
 <body>
-
-        
-
 
 <header>
 	

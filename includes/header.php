@@ -33,7 +33,16 @@
                                 
                 <article class="col span_2_of_12 right welcome">
                 
-                    <span>Welcome, <a href="client.php">User</a></span>
+                <?php 
+                    if (isset($_SESSION['user_id']) ) {
+                        echo '<span>Welcome, <a href="client.php">'.$_SESSION["username"].'</a></span>';
+                    }
+                    else{
+                        echo '<span>Welcome, <a href="home_page.php">Guest</a></span>
+                              <br />
+                              <span><a href="login.php">Login</a>/<a href="register.php">Register</a>';
+                    }  
+                ?>
                 
                 
                 </article>		<!--end of login box-->
