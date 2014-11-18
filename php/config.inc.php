@@ -2,7 +2,7 @@
 
     $server = "localhost";
     $login = "root";
-    $pass = "";
+    $pass = "root";
     $db_name = "finit";
     
 
