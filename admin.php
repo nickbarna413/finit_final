@@ -36,48 +36,7 @@
 
 <section class="main-content col span_4_of_5">
 
-	<h2 class="h2">Order History</h2>
 
-	<table>
-    
-    	<tr>
-        
-        	<th>Date</th><th>Item</th><th>Qty</th><th>Price</th><th>User</th><th>Total</th>
-    
-    	</tr>
-        
-        <tr>
-        
-        	<td>6-23-14</td><td>The Cornicopia</td><td>6</td><td>$41.98</td><td>Ted Burt</td>
-        
-        </tr>
-        
-        <tr>
-        
-        	<td>6-23-14</td><td>The REO Speedwagon</td><td>12</td><td>$83.96</td><td>Randy Bachman</td>
-        
-        </tr>
-        
-        <tr>
-        
-        	<td>6-25-14</td><td>Grandma's Wallpaper</td><td>21</td><td>$167.93</td><td>Gertrude Smuckers</td>
-        
-        </tr>
-
-        <tr>
-        
-        	<td>6-25-14</td><td>The Classic</td><td>3</td><td>$20.99</td><td>Steven Speilberg</td>
-        
-        </tr>
-        
-        
-        <tr class="order-total">
-        
-        	<td></td><td></td><td></td><td></td><td></td><td>$314.86</td>
-        
-        </tr>
-    
-    </table>
     
     <h2 class="h2">Products</h2>
     
@@ -244,20 +203,7 @@
         
         </form>
 
-    
-    	<h2 class="h2">Statistics</h2>
-        <table>
-        
-        <tr>
-        	<th>Total Qty. Purchased</th><th>Total No. Users</th><th>Total Profit</th>
-        </tr>
-        
-        <tr>
-        	<td>512</td><td>3</td><td>$10,284.23</td>
-		</tr>
-     
-       
-   	  </table>
+
 
     
 </section>		<!--end of main content-->

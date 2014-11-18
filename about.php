@@ -1,6 +1,6 @@
+
 <?php include 'includes/head.php' ?>
 
-<!DOCTYPE html>
 
 <body>
 <?php include 'includes/header.php' ?>

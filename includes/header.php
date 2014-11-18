@@ -38,7 +38,7 @@
                     else{
                         echo '<span>Welcome, <a href="home_page.php">Guest</a></span>
                               <br />
-                              <span><a href="login.php">Login</a>/<a href="register.php">Register</a>';
+                              <span><a href="login.php">Login</a>/<a href="register.php">Register</a></span>';
                     }  
                 ?>
                 

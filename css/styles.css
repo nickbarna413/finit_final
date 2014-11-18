@@ -112,6 +112,14 @@ a, #search-submit, .form-submit, .admin-button {
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out; }
 
+.main-content a.admin-button:visited {
+	color: white;
+}
+
+.main-content a.admin-button {
+	color: white;
+}
+
 .contrast {
   color: #DBDBDB;
   background-color: rgba(0, 0, 0, 0.67); }
@@ -479,4 +487,8 @@ h2.embiggen-more {
 
 .help-block {
 	margin-bottom: 18px; display: block;
+}
+
+.cart-submit {
+	margin-top: 18px; display: inline-block;
 }

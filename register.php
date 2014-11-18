@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 <?php 
 include 'includes/head.php';
 include 'php/config.inc.php'; ?>
 <!DOCTYPE html>
+=======
+<?php include 'includes/head.php' ?>
+>>>>>>> FETCH_HEAD
 
 <body id="login">
 
