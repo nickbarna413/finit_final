@@ -1,12 +1,15 @@
-<?php require('./includes/config.php'); ?>
-<!DOCTYPE html>
-<html>
-<head>
-<title>Login</title>
-</head>
+<?php include 'includes/head.php' ?>
 
-<body style="font-family: verdan, sans-serif;">
-	<?php
+<!DOCTYPE html>
+
+<body id="login">
+
+<?php include 'includes/header.php' ?>
+
+<main class="global-width group section">
+
+
+<?php
 
 /*if (isset($_SESSION['user_id'])) {
 		//$url = $protocol . BASE_URL . $destination; // Define the URL.
@@ -134,24 +137,29 @@ $_SESSION['user_admin'] = true;
 
 	}
 
-echo '<div id="pageWrap">';
-	echo '<div style="width: 80%; padding: 5px 15px; border: 1px solid #e3e3e3; margin: auto;" id="pageHeader">
-			<h1>Login</h1>
-			<br />
-			<form action=" " method="post">
-				<div class="formWrap">
+echo '<div class="global-width">';
+	echo '<h1 class="h1">Login</h1>
+			
+			<form action=" " method="post" class="login">
+			
 					<input type="email" placeholder="Email" name="email" class="field">
-					<br />
+				
 					<input type="password" placeholder="Password" name="password" class="field">
-					<br />
-					<input type="submit" value="Login" name="login" class="formSubmit">
-				</div>
+				
+					<input type="submit" value="Login" name="login" class="formSubmit admin-button">
+				
 			</form>
-			<br />
-			<h6>No Account? <a href="register.php">Register</a></h6>
-		  </div>';
+		
+			<h3 class="h3">No Account? <a href="register.php">Register</a></h3><br /><br /><br />';
 echo '</div>';
-echo '</body>';
-echo '</html>';
 
 ?>
+</main>	<!--end of wrapper-->
+
+<?php include 'includes/footer.php' ?>
+
+
+
+</body>
+
+</html>

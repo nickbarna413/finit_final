@@ -463,3 +463,11 @@ h2.embiggen-more {
 .red {
 	color: red;
 }
+
+.login input {
+	display: block; margin-bottom: 18px;
+}
+
+#login main .h3 {
+	padding: 1%; margin-top: 0;
+}
