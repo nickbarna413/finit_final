@@ -78,11 +78,11 @@ mysqli_close($con);
 		<section class="section group global-width">
 
         
-        	<form class="col span_5_of_12 search">
+        	<form action="search.php" method="get" class="col span_5_of_12 search">
                 
-                    <input  class="text-input" type="text" name="search" placeholder="Search" />
+                    <input  class="text-input" type="text" name="search_results" placeholder="Search" />
                     
-                    <input id="search-submit" type="image"  alt="Submit" src="img/searchButton.png" name="searchSubmit"  />
+                    <input id="search-submit" type="image"  alt="Submit" src="img/searchButton.png" name="search"  />
                 
                 </form>
 

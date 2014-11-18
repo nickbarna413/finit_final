@@ -72,7 +72,7 @@
 			<dd><input type="text" id="product_name" name="product_name" value="<?php echo $product_name; ?>"></dd>
 
 			<dt><label for="product_desc">Product Description:</label></dt>
-			<dd><textarea rows=7 id="product_desc" name="product_description" ><?php echo $product_description; ?></textarea></dd>
+			<dd><textarea rows=7 id="product_desc"value="<?php echo $product_name; ?>" name="product_description" ><?php echo $product_description; ?></textarea></dd>
 	
 			<dt><label for="product_price">Product Price:</label></dt>
 			<dd><input id="product_price" type="text" name="product_price" value="<?php echo $product_price; ?>"></dd>
@@ -107,7 +107,7 @@
 					$womens = "";					
 				} else if($product_category_id == "4") {
 					$limited = "checked";
-					$mens = "checked";
+					$mens = "";
 					$womens = "";
 					$childrens = "";					
 				}

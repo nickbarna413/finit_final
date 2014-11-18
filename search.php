@@ -2,7 +2,7 @@
 
 <?php include 'includes/head.php' ?>
 
-<body id="edit">
+<body id="search">
 
 
 <?php include 'includes/header.php' ?>
@@ -14,14 +14,15 @@
 
 <?php 
 
-$result = mysqli_query($mysqli,"SELECT * FROM products WHERE name LIKE '%$_GET[search_results]%'");
+$result = mysqli_query($mysqli,"SELECT * FROM product WHERE name LIKE '%$_GET[search_results]%'");
 
 
  while($ser = mysqli_fetch_array($result)) {
 	echo "<article class=\"search-results\">";
-	echo "<h2 class=\"h2\">$ser[name]</h2>";
-	echo "<p>$ser[description]</p>";
-	echo "<span>$" . $ser['price'] . ".99</span>";
+	echo "<a href='product.php?name=" . $ser['name'] . "&desc=" . $ser['description'] . "&price=" . $ser['price'] . "&thumb=" . $ser['thumb'] . "'><h2 class=\"h2\">" . $ser['name'] . "</h2></a>";
+	echo "<img src='" . $ser['thumb'] . "' alt='" . $ser['name'] . "' />"; 
+	echo "<p>" . $ser['description'] . "</p>";
+	echo "<span class='h3'>" . $ser['price'] . "</span>";
 	echo "</article>";
 }
 

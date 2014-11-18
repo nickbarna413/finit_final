@@ -415,4 +415,28 @@ textarea {
 .team_member img {
   width: 70%; }
 
+h2.embiggen-more {
+	font-size: 5em;
+}
+
+.main-content a {
+	color: black;
+}
+
+.main-content a:visited {
+	color: #666;
+}
+
+.search-results {
+	padding-bottom: 1%; border-bottom: 1px solid #ccc; margin-bottom: 2%; text-align: center;
+}
+
+#product .main-content .product-img {
+	border-right: 1px solid #ccc;border-left: 1px solid #ccc; box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box; 
+	text-align: center;
+	
+	}
+
 /*# sourceMappingURL=styles.css.map */
