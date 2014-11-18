@@ -1,4 +1,5 @@
-<?php include 'php/config.inc.php'; ?>
+<?php session_start();
+include 'php/config.inc.php'; ?>
 
 <?php
 
@@ -100,7 +101,8 @@ if ( mysqli_connect_errno() ) {
     
                     <?php 
                         if (isset($_SESSION['user_id']) ) {
-                            echo '<span>Welcome, <a href="client.php">'.$_SESSION["username"].'</a></span>';
+                            echo '<span>Welcome, <a href="client.php">'.$_SESSION["username"].'</a></span><br>';
+                            echo '<a href="logout.php">Logout</a>';
                         }
                         else{
                             echo '<span>Welcome, <a href="home_page.php">Guest</a></span>

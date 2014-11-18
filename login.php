@@ -112,7 +112,7 @@ $_SESSION['user_admin'] = true;
 						session_regenerate_id(true);
 						$_SESSION['user_admin'] = true;
 						//echo 'username '. $_SESSION['username'];
-						header('location: http://localhost:8888/DIG4530/versionA/admin.php', true);
+						header('location:admin.php', true);
 					}
 
 					
@@ -121,8 +121,8 @@ $_SESSION['user_admin'] = true;
 					$_SESSION['username'] = $row['username'];
 					$_SESSION['user_admin'] = $row['type'];
 					//echo 'username '. $_SESSION['username'];
-					header('location: client.php', true);
-					echo 'HEY IT WORKS';
+					header('location:client.php', true);
+					echo '<h1>Youre in! </h1><a href="client.php">Click Here</a>';
 						
 				}else { // Right email address, invalid password.
 					$login_errors['login'] = 'The password does not match that on file.';

@@ -5,7 +5,13 @@
 
 <body id="admin">
 
-<?php include 'includes/header.php'; ?> 
+<?php include 'includes/header.php'; 
+
+if($_SESSION['user_admin'] != 'admin'){
+	header('location:home_page.php', true);
+	echo "LEAVE NOW YOU, CANT BE HERE!";
+}
+?> 
 
 
 <main class="global-width section group">
