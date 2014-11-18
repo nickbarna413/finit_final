@@ -1,0 +1,135 @@
+.global-width {
+	width: 90%
+}
+
+.main-nav {
+	font-size: 1.6em;
+	
+	
+}
+
+
+
+.fancy-em {
+	font-family: $lobster; font-size: 6em;
+}
+
+.normal-em {
+	font-family: $oswald; font-size: 4.6em; text-transform: uppercase;
+}
+
+.small-em {
+	font-family: $oswald; font-size: 1.2em; text-transform:uppercase;
+}
+
+.mega-em {
+	font-family: $lobster; font-size: 12em; 
+}
+
+	
+.main-nav .white-logo {
+		width: 64px; height: 62px; background-image: url(../img/mainLogo_White_Smallest.png);
+	}
+	
+.main-nav li {
+	line-height: 62px; 
+}
+
+.main-nav a {
+	font-size: .7em;
+}
+
+.center {
+	text-align: center;
+}
+
+footer .grey-logo {
+	display: none;
+}
+
+footer p, footer .form-submit, li {
+	font-size: 1.2em;
+}
+
+.text-input {
+	font-size: 1em;
+}
+
+
+footer h2 {
+	font-size: 1.2em;
+}
+
+footer {
+	padding: 4% 0;
+}
+
+.featured-price {
+	font-size: 3em;
+}
+
+.shipping {
+	font-size: 1.8em;
+}
+
+.limited-ad-small {
+	max-width: 50%; display: block;
+}
+
+.limited-ad {
+	display: none;
+}
+
+.center {
+	text-align: center;
+}
+
+.page .main-nav li {
+	text-align: left;
+}
+
+.page .main-nav .center {
+	text-align: center;
+}
+
+.page .main-nav a {
+	font-size: .6em;
+}
+
+.product-h3 {
+	font-size: 1.2em;
+}
+
+.price {
+	font-size: 1.4em;
+}
+
+.h1 {
+	font-size: 1.6em;
+}
+
+
+.page .span_1_of_4 {
+	width: 23.8%; 
+}
+
+.filter .h3 {
+	display: none;
+}
+
+.filter aside dt {
+	margin-right: 20%;
+}
+
+.filter aside dd {
+	font-size: .8em;
+}
+
+
+.aside article {
+	padding: 10%;
+}
+
+.h2 {
+	font-size: 1.6em;
+}

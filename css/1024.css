@@ -1,0 +1,72 @@
+.global-width {
+	width: 90%
+}
+
+.main-nav {
+	font-size: 1.6em;
+	
+	
+}
+
+
+
+.fancy-em {
+	font-family: $lobster; font-size: 6em;
+}
+
+.normal-em {
+	font-family: $oswald; font-size: 4.6em; text-transform: uppercase;
+}
+
+.small-em {
+	font-family: $oswald; font-size: 1.2em; text-transform:uppercase;
+}
+
+.mega-em {
+	font-family: $lobster; font-size: 12em; 
+}
+
+	
+.main-nav .white-logo {
+		width: 95px; height: 93px; background-image: url(../img/mainLogo_White_Small.png);
+	}
+	
+.main-nav li {
+	line-height: 93px; 
+}
+
+.center {
+	text-align: center;
+}
+
+.page .main-nav li {
+	text-align: left;
+}
+
+.page .main-nav .center {
+	text-align: center;
+}
+
+.page .main-nav a {
+	font-size: .8em;
+}
+
+.product-h3 {
+	font-size: 1.2em;
+}
+
+.price {
+	font-size: 1.8em;
+}
+
+.h1 {
+	font-size: 1.6em;
+}
+
+.aside article {
+	padding: 10%;
+}
+
+.h2 {
+	font-size: 1.6em;
+}

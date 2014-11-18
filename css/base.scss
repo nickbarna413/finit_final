@@ -1,0 +1,42 @@
+/* variables */
+
+$center: 0 auto;
+$oswald: 'Oswald', sans-serif;
+$lato: 'Lato', sans-serif;
+
+.wide-width {
+	width: 1645px; margin: $center;
+
+
+}
+
+.nav {
+	color: black; font-family: $lato; font-weight: normal; text-transform: uppercase;
+
+}
+
+a {
+	transition: opacity .12s ease-in-out; -moz-transition: opacity .12s ease-in-out;  -webkit-transition: opacity .12s ease-in-out; text-decoration: none;
+	
+	&:hover {
+		opacity: .5;
+	}
+	
+}
+
+.horNav {
+	
+	@extend .nav;
+	
+	li {
+		
+	display: inline;
+	
+	}
+}
+
+.userNav {
+
+
+	
+}

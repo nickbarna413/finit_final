@@ -1,0 +1,139 @@
+.global-width {
+	width: 90%
+}
+
+.main-nav {
+	font-size: 1.6em; padding-top: 0;
+	
+	
+}
+
+.block-text {
+	display: none;
+}
+
+
+.fixed {
+	position: inherit;
+}
+
+	
+.main-nav .white-logo {
+		display: none;
+	}
+	
+.main-nav li {
+	line-height: 1.5em; text-align: left;
+}
+
+.main-nav a {
+	font-size: .7em;  color: black;
+}
+
+.center {
+	text-align: center;
+}
+
+footer .grey-logo {
+	display: none;
+}
+
+footer p, footer .form-submit, li {
+	font-size: 1.2em;
+}
+
+.text-input {
+	font-size: 1em;
+}
+
+
+footer h2 {
+	font-size: 1.2em;
+}
+
+footer {
+	padding: 4% 0;
+}
+
+.featured-price {
+	font-size: 3em;
+}
+
+.shipping {
+	padding-bottom: 15%; background-position: right 8% bottom;
+}
+
+.limited-ad-small {
+	max-width: 50%; display: block;
+}
+
+.limited-ad {
+	display: none;
+}
+
+footer article {
+		border-bottom: 1px solid grey; border-right: none; padding-top: 5%;
+	}
+	
+header {
+	background-image: none; position: relative;
+}
+
+footer article:last-child {
+	border-bottom: none;
+}
+
+.search {
+	display: none;
+}
+
+.mobile-logo {
+	display: block; position: absolute; top: 20px; left: 20px; z-index: 1199;
+}
+
+.center {
+	text-align: center;
+}
+
+.page .main-nav li {
+	text-align: left;
+}
+
+.page .main-nav .center {
+	text-align: center;
+}
+
+.page .main-nav a {
+	font-size: .8em;
+}
+
+.product-h3 {
+	font-size: 1.2em;
+}
+
+.price {
+	font-size: 1.4em;
+}
+
+.h1 {
+	font-size: 1.6em;
+}
+
+.h2 {
+	font-size: 1.4em;
+}
+.page .span_1_of_4 {
+	width: 23.8%; 
+}
+
+aside .h3 {
+	display: none;
+}
+
+aside dt {
+	margin-right: 20%;
+}
+
+aside ul {
+	margin-bottom: 18px;
+}

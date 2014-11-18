@@ -1,0 +1,387 @@
+/* variables */
+
+$oswald: 'Oswald', sans-serif; 
+
+
+
+
+/* mixins */
+
+@mixin drop-shadow {
+	-webkit-box-shadow: 0px 0px 41px -19px rgba(0,0,0,1);
+-moz-box-shadow: 0px 0px 41px -19px rgba(0,0,0,1);
+box-shadow: 0px 0px 41px -19px rgba(0,0,0,1);
+}
+
+@mixin text-shadow($blur) {
+	text-shadow: 0px 2px $blur rgba(0, 7, 0, 1);
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin background-contain {
+	-webkit-background-size:cover;
+-moz-background-size:cover;
+-o-background-size:cover;
+background-size:cover;
+background-position:center; 
+}
+
+@mixin box-sizing {
+	  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
+
+/* styles */
+
+.global-width {
+	
+	width: 1250px; margin: $center;
+
+}
+
+.liquid-image {
+	
+	width: 100%;
+
+}
+
+p, li {
+	font-size: 1.4em; line-height: 1.5em; 
+}
+
+.nav {
+	
+	font-family: $oswald; text-transform: uppercase;
+
+}
+
+.hor-nav {
+	
+	@extend .nav;
+	
+	li {
+	
+		float: left;
+	
+	}
+	
+}
+
+.h1, h2, .h3, .h4 {
+	text-transform: uppercase; font-family: $oswald; 
+}
+
+.h3 { 
+	border: 1px solid black; font-size: 2em; padding: 2%; margin-bottom: 14%;
+}
+
+.featured-price {
+	font-family: $lobster; font-weight: bold; font-size: 5em;
+}
+
+header {
+
+	
+	background-image: url(../slides/slideFour.jpg); background-repeat: no-repeat;
+	
+	margin-bottom: 1%;
+	
+	clear:both;
+		
+	.welcome {
+	
+	line-height: 2em; font-size: 1.4em; font-family: $serif;
+	
+	}
+	
+	nav a {
+	
+		width: 28px; height: 27px; color: white;
+		
+	}
+	
+	.facebook-icon {
+	
+		background-image:url(../img/topFaceIcon.png);
+		
+	}
+	
+	.twitter-icon {
+		background-image:url(../img/topTwitterIcon.png);
+	}
+	
+	.rss-icon {
+		background-image:url(../img/topRSSIcon.png);
+	}
+	
+	.linkedin-icon {
+		background-image:url(../img/topLinkedinIcon.png);
+	}
+	
+	.pinterest-icon {
+		background-image: url(../img/topPinterestIcon.png)
+	}
+
+}
+
+a, #search-submit, .form-submit {
+	transition: opacity .12s ease-in-out; -moz-transition: opacity .12s ease-in-out;  -webkit-transition: opacity .12s ease-in-out; text-decoration: none;
+	
+	&:hover {
+		opacity: .5;
+	}
+
+}
+
+.main-nav {
+	@extend .nav;
+	padding-top: 70px;
+	padding-bottom: 50px;
+	font-size: 1.8em;
+	
+	
+	.white-logo {
+		width: 170px; height: 167px;
+	}
+	
+	li {
+		line-height: 167px; 
+	}
+}
+
+#slide {
+	
+}
+
+.contrast {
+	color: #DBDBDB; background-color:rgba(0, 0, 0, 0.67);
+	
+	a {
+		color: white; font-weight: bold;
+	}
+}
+
+.image-replace {
+	display: block; text-indent: -999em;
+}
+
+.fixed {
+	position: fixed; width: 100%; z-index: 99;
+}
+
+.text-input {
+	@include border-radius(5px); 
+}
+
+.right {
+	text-align: right;
+}
+
+.left {
+	text-align: left;
+}
+
+.floatright ul {
+	float: right;
+}
+
+.white-logo {
+	background-image: url(../img/mainLogo_White.png); background-repeat: no-repeat; 
+}
+
+.image-nav {
+	max-width: 100%;
+	
+	a {
+		padding-top: 66.67%; @include background-contain;
+	}
+	
+	span {
+		padding-top: 180%; @include background-contain;
+	}
+}
+
+.mens-image {
+	background-image: url(../img/mensSocks.jpg);
+}
+
+.womens-image {
+	background-image: url(../img/womensSocks.jpg);
+}
+
+.childrens-image {
+	background-image: url(../img/childrensSocks.jpg);
+}
+
+.liquid-image {
+	max-width: 64%;
+}
+
+.body-image {
+	max-width: 100%; width: 100%;
+}
+
+.limited-ad {
+	width: 50%;
+}
+
+.limited-ad-small {
+	display: none;
+}
+
+.featured-ad {
+	width: 50%; border: 1px solid black; @include box-sizing; text-align: center; padding: 3% 5%;
+
+	img {
+		margin: 3% 0;
+	}
+
+}
+
+.shipping {
+	background-color: #00a2d6; background-image: url(../img/freeShippingBG.png); background-position: bottom right; font-size: 6em; color: white; font-family: $oswald; background-repeat: no-repeat; text-transform: uppercase;
+}
+
+.shipping span {
+	padding: 4%; display: block;
+}
+
+.em {
+	font-weight: bold; font-style: normal;
+}
+
+.ribbons { 
+		
+ img {
+	 width: 100%;
+ }
+}
+
+.block-text {
+	display: block; color: white; text-align: center; margin-bottom: 1%; @include text-shadow(10px);
+}
+
+.fancy-em {
+	font-family: $lobster; font-size: 8em;
+}
+
+.normal-em {
+	font-family: $oswald; font-size: 6.6em; text-transform: uppercase;
+}
+
+.small-em {
+	font-family: $oswald; font-size: 2.6em; text-transform:uppercase;
+}
+
+.mega-em {
+	font-family: $lobster; font-size: 16em; 
+}
+
+footer {
+	
+	font-family: $serif; 
+	
+	background-color: $finit-grey; color: white;
+	
+	padding: 1% 0;
+	
+	article {
+		border-right: 1px solid grey; @include box-sizing; 
+	}
+	
+	nav {
+		text-transform: uppercase;
+		
+	}
+	
+	nav a {
+		color: white; text-decoration: none; font-weight: bold;
+	}
+	
+
+	article:last-child {
+		border-right: none;
+	}
+	
+	h2 {
+		font-size: 1.8em; margin-bottom: 4%;
+	}
+	
+	p {
+		margin-bottom: 5%; padding-right: 20%;
+	}
+	
+	.form-submit {
+		
+		background-color: white; padding: 2% 5%; color: black; border: none; margin-top: 3%;
+
+		&:hover {
+		cursor: pointer;
+		
+		}
+	}
+	
+	input {
+		margin-bottom: 5%; margin-right: 20%;
+	}
+	
+	.text-input {
+		width: 85%;
+	}
+	
+	ul {
+		margin-bottom: 10%;
+	}
+	
+	.icons a {
+		width: 64px; height: 64px;
+	}
+	
+	.icons li {
+		float: left;
+	}
+	
+	.facebook-icon {
+	
+		background-image:url(../img/footerFacebookIcon.jpg); 
+		
+	}
+	
+	.twitter-icon {
+		background-image:url(../img/footerTwitterIcon.jpg);
+	}
+	
+	.rss-icon {
+		background-image:url(../img/footerRssIcon.jpg);
+	}
+	
+	.linkedin-icon {
+		background-image:url(../img/footerLinkedinIcon.jpg);
+	}
+	
+	.pinterest-icon {
+		background-image:url(../img/footerPinterestIcon.jpg)
+	}
+
+}
+
+.grey-logo {
+	background-image: url(../img/greyLogo.png); width: 90px; height: 90px; margin-bottom: 25%;
+}
+
+
+
+.form-submit {
+	font-family: $serif; font-size: 1.8em;
+}
+
+.mobile-logo {
+	display: none;
+}

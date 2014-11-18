@@ -1,0 +1,288 @@
+/* variables */
+/* mixins */
+/* styles */
+.global-width {
+  width: 1250px;
+  margin: 0 auto; }
+
+.liquid-image {
+  width: 100%; }
+
+p, li {
+  font-size: 1.4em;
+  line-height: 1.5em; }
+
+.nav, .hor-nav, .main-nav {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase; }
+
+.hor-nav li {
+  float: left; }
+
+.h1, h2, .h3, .h4 {
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif; }
+
+.h3 {
+  border: 1px solid black;
+  font-size: 2em;
+  padding: 2%;
+  margin-bottom: 14%; }
+
+.featured-price {
+  font-family: "Lobster", cursive;
+  font-weight: bold;
+  font-size: 5em; }
+
+header {
+  background-image: url(../slides/slideFour.jpg);  
+  background-repeat: no-repeat;
+  margin-bottom: 1%;
+  clear: both; 
+  
+  }
+  
+  header .welcome {
+    line-height: 2em;
+    font-size: 1.4em;
+    font-family: "PT Serif", serif; }
+  header nav a {
+    width: 28px;
+    height: 27px;
+    color: white; }
+  header .facebook-icon {
+    background-image: url(../img/topFaceIcon.png); }
+  header .twitter-icon {
+    background-image: url(../img/topTwitterIcon.png); }
+  header .rss-icon {
+    background-image: url(../img/topRSSIcon.png); }
+  header .linkedin-icon {
+    background-image: url(../img/topLinkedinIcon.png); }
+  header .pinterest-icon {
+    background-image: url(../img/topPinterestIcon.png); }
+
+a, #search-submit, .form-submit {
+  transition: opacity .12s ease-in-out;
+  -moz-transition: opacity .12s ease-in-out;
+  -webkit-transition: opacity .12s ease-in-out;
+  text-decoration: none; }
+  a:hover, #search-submit:hover, .form-submit:hover {
+    opacity: .5; }
+
+.main-nav {
+  padding-top: 70px;
+  padding-bottom: 50px;
+  font-size: 1.8em; }
+  .main-nav .white-logo {
+    width: 170px;
+    height: 167px; }
+  .main-nav li {
+    line-height: 167px; }
+
+.contrast {
+  color: #DBDBDB;
+  background-color: rgba(0, 0, 0, 0.67); }
+  .contrast a {
+    color: white;
+    font-weight: bold; }
+
+.image-replace {
+  display: block;
+  text-indent: -999em; }
+
+.fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 99; }
+
+.text-input {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px; }
+
+.right {
+  text-align: right; }
+
+.left {
+  text-align: left; }
+
+.floatright ul {
+  float: right; }
+
+.white-logo {
+  background-image: url(../img/mainLogo_White.png);
+  background-repeat: no-repeat; }
+
+.image-nav {
+  max-width: 100%; }
+  .image-nav a {
+    padding-top: 66.67%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center; }
+  .image-nav span {
+    padding-top: 180%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center; }
+
+.mens-image {
+  background-image: url(../img/mensSocks.jpg); }
+
+.womens-image {
+  background-image: url(../img/womensSocks.jpg); }
+
+.childrens-image {
+  background-image: url(../img/childrensSocks.jpg); }
+
+.liquid-image {
+  max-width: 64%; }
+
+.body-image {
+  max-width: 100%;
+  width: 100%; }
+
+.limited-ad {
+  width: 50%; }
+
+.limited-ad-small {
+  display: none; }
+
+.featured-ad {
+  width: 50%;
+  border: 1px solid black;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  text-align: center;
+  padding: 3% 5%; }
+  .featured-ad img {
+    margin: 3% 0; }
+
+.shipping {
+  background-color: #00a2d6;
+  background-image: url(../img/freeShippingBG.png);
+  background-position: bottom right;
+  font-size: 6em;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  background-repeat: no-repeat;
+  text-transform: uppercase; }
+
+.shipping span {
+  padding: 4%;
+  display: block; }
+
+.em {
+  font-weight: bold;
+  font-style: normal; }
+
+.ribbons img {
+  width: 100%; }
+
+.block-text {
+  display: block;
+  color: white;
+  text-align: center;
+  margin-bottom: 1%;
+  text-shadow: 0px 2px 10px #000700; }
+
+.fancy-em {
+  font-family: "Lobster", cursive;
+  font-size: 8em; }
+
+.normal-em {
+  font-family: "Oswald", sans-serif;
+  font-size: 6.6em;
+  text-transform: uppercase; }
+
+.small-em {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.6em;
+  text-transform: uppercase; }
+
+.mega-em {
+  font-family: "Lobster", cursive;
+  font-size: 16em; }
+
+footer {
+  font-family: "PT Serif", serif;
+  background-color: #3a3b3c;
+  color: white;
+  padding: 1% 0; }
+  footer article {
+    border-right: 1px solid grey;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box; }
+  footer nav {
+    text-transform: uppercase; }
+  footer nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold; }
+  footer article:last-child {
+    border-right: none; }
+  footer h2 {
+    font-size: 1.8em;
+    margin-bottom: 4%; }
+  footer p {
+    margin-bottom: 5%;
+    padding-right: 20%; }
+  footer .form-submit {
+    background-color: white;
+    padding: 2% 5%;
+    color: black;
+    border: none;
+    margin-top: 3%; }
+    footer .form-submit:hover {
+      cursor: pointer; }
+  footer input {
+    margin-bottom: 5%;
+    margin-right: 20%; }
+  footer .text-input {
+    width: 85%; }
+  footer ul {
+    margin-bottom: 10%; }
+  footer .icons a {
+    width: 64px;
+    height: 64px; }
+  footer .icons li {
+    float: left; }
+  footer .facebook-icon {
+    background-image: url(../img/footerFacebookIcon.jpg); }
+  footer .twitter-icon {
+    background-image: url(../img/footerTwitterIcon.jpg); }
+  footer .rss-icon {
+    background-image: url(../img/footerRssIcon.jpg); }
+  footer .linkedin-icon {
+    background-image: url(../img/footerLinkedinIcon.jpg); }
+  footer .pinterest-icon {
+    background-image: url(../img/footerPinterestIcon.jpg); }
+
+.grey-logo {
+  background-image: url(../img/greyLogo.png);
+  width: 90px;
+  height: 90px;
+  margin-bottom: 25%; }
+
+.form-submit {
+  font-family: "PT Serif", serif;
+  font-size: 1.8em; }
+
+.mobile-logo {
+  display: none; }
+
+#container {
+	max-width: 100%; 
+}
+
+#responsive {
+	padding-bottom: 50%; background-image: url(../slides/slideFour.jpg);  background-size: cover; background-repeat: no-repeat; background-color: red;
+}
+/*# sourceMappingURL=styles.css.map */
