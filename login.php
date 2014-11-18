@@ -1,6 +1,5 @@
-<?php include 'includes/head.php' ?>
 
-<!DOCTYPE html>
+<?php include 'includes/head.php' ?>
 
 <body id="login">
 
@@ -140,7 +139,7 @@ $_SESSION['user_admin'] = true;
 echo '<div class="global-width">';
 	echo '<h1 class="h1">Login</h1>
 			
-			<form action=" " method="post" class="login">
+			<form method="post" class="login">
 			
 					<input type="email" placeholder="Email" name="email" class="field">
 				

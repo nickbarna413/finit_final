@@ -1,7 +1,5 @@
 <?php include 'includes/head.php' ?>
 
-<!DOCTYPE html>
-
 <body id="login">
 
 <?php include 'includes/header.php' ?>

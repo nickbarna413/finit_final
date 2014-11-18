@@ -46,7 +46,7 @@
     
     <div class="location-map">
         <h2 class="h2">Come pay us a visit</h2>
-        <iframe width="500" height="350" frameborder="0" style="border:0" 
+        <iframe width="500" height="350"  
         src="https://www.google.com/maps/embed/v1/place?q=4000%20Central%20Florida%20Boulevard%2C%20Orlando%2C%20FL%2C%20United%20States&key=AIzaSyC69sb6vH5yoJr4lmB4dsIbz_16xHpN4R8">
         </iframe>
     </div>
@@ -80,7 +80,7 @@
 
 	<article>
     
-    	<h2 class="h2" class="h2 class="h2"">Contact Info</h2>
+    	<h2 class="h2">Contact Info</h2>
     
     	<p>If you can’t find an answer to your question, contact us!</p>
         
