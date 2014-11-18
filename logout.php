@@ -1,4 +1,4 @@
-<?php include 'includes/config.php'; 
+<?php include 'php/config.inc.php'; 
 
 echo '<!DOCTYPE html>
 <html>
@@ -10,7 +10,7 @@ echo '<!DOCTYPE html>
 
 if (!isset($_SESSION['user_id'])) {
 		//$url = $protocol . BASE_URL . $destination; // Define the URL.
-		header("Location: http://localhost:8888/DIG4530/versionA/home_page.php", true);
+		header("home_page.php", true);
 		exit(); // Quit the script.
 	}
 session_destroy();
@@ -20,3 +20,4 @@ setcookie (session_name(), '', time()-300);
 			<br />
 			<button><a href="home_page.php" style="color: #222;">Back</a></button>
 		  </div>';
+?>
