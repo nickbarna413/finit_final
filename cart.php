@@ -1,17 +1,6 @@
-<?php include 'php/config.inc.php'; ?>
+<?php session_start();
+include 'php/config.inc.php'; ?>
 
-<?php
-
-// Check connection
-if (mysqli_connect_errno()) {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-}
-
-$result = mysqli_query($mysqli,"SELECT * FROM products WHERE id = '3'");
-
-
-mysqli_close($mysqli);
-?> 
 
 <?php include 'includes/head.php' ?>
 
@@ -54,49 +43,33 @@ mysqli_close($mysqli);
             	<th>Item</th>
                 
                 <th>Price</th>
+            </tr>
             
-            <?php
+    <?php
     
     $total = 0;
     if(isset($_SESSION['cart'])){
-    $num_items = count($_SESSION['cart']);
-    
-    
-    
-    
-    for( $i = 0; $i < $num_items; $i++ ){
-        
-        $product_id = $_SESSION['cart'][$i];
-        
-        $result = mysqli_query($mysqli,"SELECT product.name AS product_name, product.price AS product_price FROM product WHERE product.id = $product_id");
-    
-        while($row = mysqli_fetch_array($result)) {
-            
-            $product_name = $row['product_name'];
-            $product_price = $row['product_price'];
-            
-            echo "<td>".$product_name."</td><td>".$product_price."</td></tr><tr>";
-            
-            $total = $total + $product_price;
-            
-        }
-        
-        
-        ?>
-        
-            
+        $num_items = count($_SESSION['cart']);
 
-        <?php
-    }
-    
-    ?>
-    
+        for( $i = 0; $i < $num_items; $i++ ){
+            
+            $product_id = $_SESSION['cart'][$i];
+            
+            $result = mysqli_query($mysqli,"SELECT product.name AS product_name, product.price AS product_price FROM product WHERE product.id = $product_id");
         
-        
-    
-    
-    <?php
-    
+            while($row = mysqli_fetch_array($result)) {
+                
+                $product_name = $row['product_name'];
+                $product_price = $row['product_price'];
+                
+                echo "<tr><td>".$product_name."</td><td>".$product_price."</td></tr><tr>";
+                
+                $total = $total + $product_price;
+                
+            }
+        }
+    }else{
+        //echo "DIDINT WORKD";
     }
         
 ?>
@@ -115,6 +88,7 @@ mysqli_close($mysqli);
 	    
         
         </table>
+        <a href="clear_cart.php" style="color:cornflowerblue">Clear Cart</a>
         <form action="checkout.php">
         
         	<input type="submit" class="admin-button" name="cartSubmit" value="Check Out" />

@@ -1,4 +1,5 @@
-<?php include 'php/config.inc.php'; ?>
+<?php session_start();
+include 'php/config.inc.php'; ?>
 
 <?php include 'includes/head.php' ?>
  
@@ -12,12 +13,12 @@
 
 	<h1 class="h1">
     
-    	<?php 
-	if (isset($_GET['name'])) {
-		echo $_GET["name"];
-	} else {
-		echo "all";
-	}
+    <?php 
+		if (isset($_GET['name'])) {
+			echo $_GET["name"];
+		} else {
+			echo "all";
+		}
 	?>
     
     </h1>
@@ -173,9 +174,7 @@
 				    product.published_status_id = published_status.id AND
 				    published_status.description = 'published'";
 		}
-	
-
-            
+    
 		$result = mysqli_query($mysqli, $query);
 		
 	    
@@ -240,9 +239,75 @@
 
 <?php include 'includes/footer.php' ?>
 
-<!--light boxes-->
-<article class="lightbox" id="productBox1"><h2>The Classic</h2><img src="img/theClassic.png" alt="Socks" /><ul><li class="price">$20.99/3</li><li class="alignLeft">This pair of socks is everything you can ask for, classic design, comfort and low price!</li><li class="alignLeft"><em>sku: </em> a322d600532</li></ul><form action="cart.php"><input type="submit" name="cartSubmit" class="cartSubmit" value="Add to Cart" /></form></article><article class="lightbox" id="productBox2"><h2>The Cornicopia</h2><img src="img/theCornicopia.png" alt="Socks" /><ul><li class="price">$20.99/3</li><li class="alignLeft">It's almost time for thanksgiving, and what better to have than a pair of thanksgiving socks!</li><li class="alignLeft"><em>sku: </em> a362d402532</li></ul><form action="cart.php"><input type="submit" name="cartSubmit" class="cartSubmit" value="Add to Cart" /></form></article><article class="lightbox" id="productBox3"><h2>Grandmas Wallpaper</h2><img src="img/grandmasWallpaper.png" alt="Socks" /><ul><li class="price">$23.99/3</li><li class="alignLeft">Ah, your childhood at old grandma's house. Rabbit ears, roast beef, and of course grandma's wallpaper</li><li class="alignLeft"><em>sku: </em> a382h50535</li></ul><form action="cart.php"><input type="submit" name="cartSubmit" class="cartSubmit" value="Add to Cart" /></form></article><article class="lightbox" id="productBox4"><h2>The Ruby Slippers</h2><img src="img/theRubySlippers.png" alt="Socks" /><ul><li class="price">$16.99/3</li><li class="alignLeft">Look out, it's the Witch from that movie! Just kidding, have some socks!</li><li class="alignLeft"><em>sku: </em> c538d608732</li></ul><form action="cart.php"><input type="submit" name="cartSubmit" class="cartSubmit" value="Add to Cart" /></form></article><article class="lightbox" id="productBox5"><h2>The Rules For Stud Poker</h2><img src="img/theRulesForStudPoker.png" alt="Socks" /><ul><li class="price">$13.99/3</li><li class="alignLeft">You'll be "dealing poker games" with these handsome socks! Just like your favorite pack of cards</li><li class="alignLeft"><em>sku: </em> a562d623565</li></ul><form action="cart.php"><input type="submit" name="cartSubmit" class="cartSubmit" value="Add to Cart" /></form></article><article class="lightbox" id="productBox6"><h2>The Toy Gun</h2><img src="img/theToyGun.png" alt="Socks" /><ul><li class="price">$13.99/3</li><li class="alignLeft">Relive your childhood playing with your favorite cap guns with these socks! included orange safety caps.</li><li class="alignLeft"><em>sku: </em> g132b23523</li></ul><form action="cart.php"><input type="submit" name="cartSubmit" class="cartSubmit" value="Add to Cart" /></form></article><article class="lightbox" id="productBox7"><h2>AH! Real Socks</h2><img src="img/ahRealSocks.png" alt="Socks" /><ul><li class="price">$22.99/3</li><li class="alignLeft">Bring back those 90s Nickelodeon memories with these almost-genuine real monsters socks!</li><li class="alignLeft"><em>sku: </em> d346s34534</li></ul><form action="cart.php"><input type="submit" name="cartSubmit" class="cartSubmit" value="Add to Cart" /></form></article><article class="lightbox" id="productBox8"><h2>Come On Get Happy</h2><img src="img/comeOnGetHappy.png" alt="Socks" /><ul><li class="price">$15.99/3</li><li class="alignLeft">There'll be a song that you're singing when you buy these bad boys. Hop on the bus and get down with the groovy music. </li><li class="alignLeft"><em>sku: </em> pf346j345346</li></ul><form action="cart.php"><input type="submit" name="cartSubmit" class="cartSubmit" value="Add to Cart" /></form></article><article class="lightbox" id="productBox9"><h2>The REO Speedwagon</h2><img src="img/theREOSpeedwagon.png" alt="Socks" /><ul><li class="price">$20.99/3</li><li class="alignLeft">Grab your acid-washed jeans, spike up that mullet, hit that van and put these socks on for good luck. You'll hearing from a friend who heard that you've got great socks!</li><li class="alignLeft"><em>sku: </em> r4232d234234</li></ul><form action="cart.php"><input type="submit" name="cartSubmit" class="cartSubmit" value="Add to Cart" /></form></article><article class="lightbox" id="productBox10"><h2>The Purist</h2><img src="img/thePurist.png" alt="Socks" /><ul><li class="price">$16.99/3</li><li class="alignLeft">As far as wacky socks are concerned, these are standard issue. Buy these for those boring days at the office</li><li class="alignLeft"><em>sku: </em> ed23rm34534</li></ul><form action="cart.php"><input type="submit" name="cartSubmit" class="cartSubmit" value="Add to Cart" /></form></article>
-<!--end of lightboxes-->
+
+<?php
+
+$result = mysqli_query($mysqli, $query);
+while($row = mysqli_fetch_array($result)) {
+	
+	$product_id = $row['product_id'];
+	$product_name = $row["product_name"];
+	$product_price = $row["product_price"];
+	$product_thumb = $row["product_thumb"];
+	$product_discount = $row["product_discount_rate"];
+	$product_description = $row["product_description"];
+	$product_rating = $row['product_rating'];
+    
+ 	 echo "<article class=\"lightbox\" id=\"productBox"  . $product_id . "\">";
+      	
+		echo "<h2>" . $product_name . "</h2>";
+	  	
+		echo "<img src=\"" . $product_thumb . "\" alt=\"Socks\" />";
+		
+		echo "<ul>";
+		
+			echo "<li class=\"price\">$" . $product_price . ".99/3</li>";
+			
+			echo "<li class=\"alignLeft\">" . $product_description . "</li>";
+			
+			echo "<li class=\"alignLeft\"><em>sku: </em> " . $product_id . "</li>";
+			
+
+		
+		echo "</ul>";
+					
+			
+			echo "<a href=\"save_to_cart.php?ProductID=".$product_id."\" class=\"cartSubmit\" />Add to Cart</a>";
+			
+
+	  
+	  echo "</article>"; 
+	  
+} 
+
+?>
+<!--light boxes
+<article class="lightbox" id="productBox1">
+	<h2>The Classic</h2>
+	<img src="img/theClassic.png" alt="Socks" />
+	<ul>
+		<li class="price">$20.99/3</li>
+		<li class="alignLeft">This pair of socks is everything you can ask for, classic design, comfort and low price!</li>
+		<li class="alignLeft"><em>sku: </em> a322d600532</li>
+	</ul>
+	<form action="cart.php">
+		<input type="submit" name="cartSubmit" class="cartSubmit" value="Add to Cart" />
+	</form>
+</article>
+<article class="lightbox" id="productBox2">
+	<h2>The Cornicopia</h2>
+	<img src="img/theCornicopia.png" alt="Socks" />
+	<ul>
+		<li class="price">$20.99/3</li>
+		<li class="alignLeft">It's almost time for thanksgiving, and what better to have than a pair of thanksgiving socks!</li>
+		<li class="alignLeft"><em>sku: </em> a362d402532</li>
+	</ul>
+	<form action="cart.php">
+		<input type="submit" name="cartSubmit" class="cartSubmit" value="Add to Cart" />
+	</form>
+</article>
+<article class="lightbox" id="productBox3"><h2>Grandmas Wallpaper</h2><img src="img/grandmasWallpaper.png" alt="Socks" /><ul><li class="price">$23.99/3</li><li class="alignLeft">Ah, your childhood at old grandma's house. Rabbit ears, roast beef, and of course grandma's wallpaper</li><li class="alignLeft"><em>sku: </em> a382h50535</li></ul><form action="cart.php"><input type="submit" name="cartSubmit" class="cartSubmit" value="Add to Cart" /></form></article><article class="lightbox" id="productBox4"><h2>The Ruby Slippers</h2><img src="img/theRubySlippers.png" alt="Socks" /><ul><li class="price">$16.99/3</li><li class="alignLeft">Look out, it's the Witch from that movie! Just kidding, have some socks!</li><li class="alignLeft"><em>sku: </em> c538d608732</li></ul><form action="cart.php"><input type="submit" name="cartSubmit" class="cartSubmit" value="Add to Cart" /></form></article><article class="lightbox" id="productBox5"><h2>The Rules For Stud Poker</h2><img src="img/theRulesForStudPoker.png" alt="Socks" /><ul><li class="price">$13.99/3</li><li class="alignLeft">You'll be "dealing poker games" with these handsome socks! Just like your favorite pack of cards</li><li class="alignLeft"><em>sku: </em> a562d623565</li></ul><form action="cart.php"><input type="submit" name="cartSubmit" class="cartSubmit" value="Add to Cart" /></form></article><article class="lightbox" id="productBox6"><h2>The Toy Gun</h2><img src="img/theToyGun.png" alt="Socks" /><ul><li class="price">$13.99/3</li><li class="alignLeft">Relive your childhood playing with your favorite cap guns with these socks! included orange safety caps.</li><li class="alignLeft"><em>sku: </em> g132b23523</li></ul><form action="cart.php"><input type="submit" name="cartSubmit" class="cartSubmit" value="Add to Cart" /></form></article><article class="lightbox" id="productBox7"><h2>AH! Real Socks</h2><img src="img/ahRealSocks.png" alt="Socks" /><ul><li class="price">$22.99/3</li><li class="alignLeft">Bring back those 90s Nickelodeon memories with these almost-genuine real monsters socks!</li><li class="alignLeft"><em>sku: </em> d346s34534</li></ul><form action="cart.php"><input type="submit" name="cartSubmit" class="cartSubmit" value="Add to Cart" /></form></article><article class="lightbox" id="productBox8"><h2>Come On Get Happy</h2><img src="img/comeOnGetHappy.png" alt="Socks" /><ul><li class="price">$15.99/3</li><li class="alignLeft">There'll be a song that you're singing when you buy these bad boys. Hop on the bus and get down with the groovy music. </li><li class="alignLeft"><em>sku: </em> pf346j345346</li></ul><form action="cart.php"><input type="submit" name="cartSubmit" class="cartSubmit" value="Add to Cart" /></form></article><article class="lightbox" id="productBox9"><h2>The REO Speedwagon</h2><img src="img/theREOSpeedwagon.png" alt="Socks" /><ul><li class="price">$20.99/3</li><li class="alignLeft">Grab your acid-washed jeans, spike up that mullet, hit that van and put these socks on for good luck. You'll hearing from a friend who heard that you've got great socks!</li><li class="alignLeft"><em>sku: </em> r4232d234234</li></ul><form action="cart.php"><input type="submit" name="cartSubmit" class="cartSubmit" value="Add to Cart" /></form></article><article class="lightbox" id="productBox10"><h2>The Purist</h2><img src="img/thePurist.png" alt="Socks" /><ul><li class="price">$16.99/3</li><li class="alignLeft">As far as wacky socks are concerned, these are standard issue. Buy these for those boring days at the office</li><li class="alignLeft"><em>sku: </em> ed23rm34534</li></ul><form action="cart.php"><input type="submit" name="cartSubmit" class="cartSubmit" value="Add to Cart" /></form></article>
+end of lightboxes-->
 
 	<!-- JavaScript at the bottom for fast page loading -->
 

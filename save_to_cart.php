@@ -1,5 +1,4 @@
-<?php
-    session_start();
+<?php session_start();
     
     $product_id = $_GET["ProductID"];
     
@@ -10,6 +9,5 @@
     // INSERT PRODUCT_ID INTO SESSION ARRAY 'CART',
     // THEN REDIRECT TO SHOPPING CART
     
-    header('Location: ' . 'cart.php')
-    
+    header('Location: ' . 'cart.php');
 ?>
