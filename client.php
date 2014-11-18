@@ -27,32 +27,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 
         if(preg_match('/^[0-9]+$/', $upd_Num)){
             Echo " phone passed ";  
-            $numQuery = "UPDATE `finit`.`customer` SET `phone` = '".$upd_Num."' WHERE `customer`.`id` = '".$userID."'";
+            $numQuery = "UPDATE `el663147`.`customer` SET `phone` = '".$upd_Num."' WHERE `customer`.`id` = '".$userID."'";
             mysqli_query($mysqli, $numQuery);
         }
         if(preg_match('/^[0-9a-zA-Z. ]+$/', $upd_Addr)){
             Echo "first address passed ";
-            $addrQuery = "UPDATE `finit`.`customer` SET `addr_1` = '".$upd_Addr."' WHERE `customer`.`id` = '".$userID."'";
+            $addrQuery = "UPDATE `el663147`.`customer` SET `addr_1` = '".$upd_Addr."' WHERE `customer`.`id` = '".$userID."'";
             mysqli_query($mysqli, $addrQuery);
         }
         if(preg_match('/^[a-zA-Z0-9 ]+$/', $upd_Addr2)){
             Echo "second address passed ";
-            $addr2Query = "UPDATE `finit`.`customer` SET `addr_2` = '".$upd_Addr2."' WHERE `customer`.`id` = '".$userID."'";
+            $addr2Query = "UPDATE `el663147`.`customer` SET `addr_2` = '".$upd_Addr2."' WHERE `customer`.`id` = '".$userID."'";
             mysqli_query($mysqli, $addr2Query);
         }
         if(preg_match('/^[a-zA-Z ]+$/', $upd_City)){
             Echo "city passed ";
-            $cityQuery = "UPDATE `finit`.`customer` SET `city` = '".$upd_City."' WHERE `customer`.`id` = '".$userID."'";
+            $cityQuery = "UPDATE `el663147`.`customer` SET `city` = '".$upd_City."' WHERE `customer`.`id` = '".$userID."'";
             mysqli_query($mysqli, $cityQuery);
         }
         if(preg_match('/^[a-zA-Z ]+$/', $upd_State)){
             Echo "state passed ";
-            $stateQuery = "UPDATE `finit`.`customer` SET `state` = '".$upd_State."' WHERE `customer`.`id` = '".$userID."'";
+            $stateQuery = "UPDATE `el663147`.`customer` SET `state` = '".$upd_State."' WHERE `customer`.`id` = '".$userID."'";
             mysqli_query($mysqli, $stateQuery);
         }
         if(preg_match('/^[0-9]+$/', $upd_Zip)){
             Echo "zip passed ";
-            $zipQuery = "UPDATE `finit`.`customer` SET `zip` = '".$upd_Zip."' WHERE `customer`.`id` = '".$userID."'";
+            $zipQuery = "UPDATE `el663147`.`customer` SET `zip` = '".$upd_Zip."' WHERE `customer`.`id` = '".$userID."'";
             mysqli_query($mysqli, $zipQuery);
         }
         //$updQuery = "UPDATE `finit`.`customer` SET `phone` = '".$upd_Num."', `addr_1` = '".$upd_Addr."', `addr_2` = '".$upd_Addr2."', `city` = '".$upd_City."', `state` = '".$upd_State."', `zip` = '".$upd_Zip."' WHERE `customer`.`id` = '".$userID."'";
