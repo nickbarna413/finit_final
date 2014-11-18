@@ -125,7 +125,11 @@
 print "<article class='col span_1_of_3'><h3 class='h3'>Description:</h3><p>" . $_GET['desc'] . "</p></article>";
 print "<article class='col span_1_of_3 product-img'><img src='" . $_GET['thumb'] . "' alt='" . $_GET['name'] . "' /></article>"; 
 
-print "<article class='center col span_1_of_3'><h3 class='h3'>Price:</h3><h2 class='h2 embiggen-more'>$" . $_GET['price'] . "</h2></article>";
+print "<article class='center col span_1_of_3'><h3 class='h3'>Price:</h3><h2 class='h2 embiggen-more'>$" . $_GET['price'] . "</h2>";
+
+print "<a href=\"save_to_cart.php?ProductID=". $_GET['product_id']."\" class='admin-button embiggen cart-submit' />Add to Cart</a>";
+
+print "</article>";
 
 ?>
 

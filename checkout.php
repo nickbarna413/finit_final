@@ -95,7 +95,7 @@ mysqli_close($mysqli);
     
     ?>
 
-        <span id="total">total: <em><?php echo $total; ?></em></span>
+        <span id="total" class="embiggen">total: <em><?php echo $total; ?></em></span>
 
      </article>
      
