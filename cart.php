@@ -57,32 +57,66 @@ mysqli_close($mysqli);
             
             	<th>Item</th>
                 
-                <th>Description</th>
-                
-                <th>Qty</th>
-                
                 <th>Price</th>
             
-            </tr>
+            <?php
+    
+    $total = 0;
+    if(isset($_SESSION['cart'])){
+    $num_items = count($_SESSION['cart']);
+    
+    
+    
+    
+    for( $i = 0; $i < $num_items; $i++ ){
+        
+        $product_id = $_SESSION['cart'][$i];
+        
+        $result = mysqli_query($mysqli,"SELECT product.name AS product_name, product.price AS product_price FROM product WHERE product.id = $product_id");
+    
+        while($row = mysqli_fetch_array($result)) {
             
-            <tr>
+            $product_name = $row['product_name'];
+            $product_price = $row['product_price'];
             
-            <?php 
-			
-			while($row = mysqli_fetch_array($result)) {
-  
-				echo "<td><img src='" . $row['productimage'] . "' alt=\"Grandmas Wallpaper\" /></td>";
-				
-				echo "<td>" . $row['name'] . "</td>";
-				
-				echo "<td>1</td>";
-				
-				echo "<td>$" . $row['price'] . ".99</td>";
+            echo "<td>".$product_name."</td><td>".$product_price."</td></tr><tr>";
+            
+            $total = $total + $product_price;
+            
+        }
+        
+        
+        ?>
+        
+            
 
-			}
-      		?>
+        <?php
+    }
+    
+    ?>
+    
+        
+        
+    
+    
+    <?php
+    
+    }
+        
+?>
+            
+            
             
              </tr>
+	    <tr>
+	      <td>
+		TOTAL
+	      </td>
+	      <td>
+		$<?php echo $total; ?>
+	      </td>
+	    </tr>
+	    
         
         </table>
         <form action="checkout.php">
