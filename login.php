@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 <?php include 'includes/head.php';
 include 'php/config.inc.php'; ?>
-=======
->>>>>>> FETCH_HEAD
+
 
 <?php include 'includes/head.php' ?>
 

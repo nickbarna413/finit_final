@@ -1,11 +1,11 @@
-<<<<<<< HEAD
 <?php 
 include 'includes/head.php';
 include 'php/config.inc.php'; ?>
+
 <!DOCTYPE html>
-=======
+
 <?php include 'includes/head.php' ?>
->>>>>>> FETCH_HEAD
+
 
 <body id="login">
 
@@ -58,7 +58,9 @@ include 'php/config.inc.php'; ?>
 	if(empty($reg_errors)){
 		// Make sure the email address and username are available:
 		$query = "SELECT email, username FROM users WHERE email='$email' OR username='$username'";
+		$query2 = "INSERT INTO customer (username, name, email) VALUES ('$username','$name','$email')";
 		$request = mysqli_query($mysqli, $query);
+		$request2 = mysqli_query($mysqli, $query2);
 
 		$rows = mysqli_num_rows($request);
 	

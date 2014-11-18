@@ -1,4 +1,5 @@
-<?php include 'php/config.inc.php'; ?>
+<?php include 'php/head.php';
+include 'php/config.inc.php'; ?>
 <?php
 
 // Check connection
@@ -95,7 +96,7 @@ mysqli_close($mysqli);
     
     ?>
 
-        <span id="total" class="embiggen">total: <em><?php echo $total; ?></em></span>
+        <span id="total">total: <em><?php echo $total; ?></em></span>
 
      </article>
      

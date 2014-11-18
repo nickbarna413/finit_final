@@ -94,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         
         <dl>
         
-            <dt>User Name:</dt><dd><span><?php echo "JEFF";//$_SESSION["username"]; ?></span></dd>
+            <dt>User Name:</dt><dd><span><?php echo $_SESSION["username"]; ?></span></dd>
             
             <dt>Name:</dt><dd><span><?php echo $row['name']; ?></span></dd>
             
