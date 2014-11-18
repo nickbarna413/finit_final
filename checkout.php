@@ -1,4 +1,4 @@
-<?php $con=mysqli_connect("localhost","root","","finit"); ?>
+<?php include 'php/config.inc.php'; ?>
 <?php
 
 // Check connection
@@ -6,10 +6,10 @@ if (mysqli_connect_errno()) {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-$result = mysqli_query($con,"SELECT * FROM products WHERE id = '3'");
+$result = mysqli_query($mysqli,"SELECT * FROM products WHERE id = '3'");
 
 
-mysqli_close($con);
+mysqli_close($mysqli);
 ?> 
 
 
