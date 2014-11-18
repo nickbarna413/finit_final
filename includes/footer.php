@@ -106,4 +106,3 @@
 
 <script src="http://code.jquery.com/jquery-latest.min.js"
         type="text/javascript"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.47/jquery.form-validator.min.js"></script>

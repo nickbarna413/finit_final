@@ -14,7 +14,7 @@
     
     <p>Are you looking to contact us directly? Use the form below and let us know what you need! If you are in need of other support, check the support page for many answered questions and support methods. </p>
 
-    <form action='sendEmail.php' method="POST" class="text-left">
+    <form action='sendEmail.php' method="POST" class="text-left" id="contactForm">
     
     	<fieldset>
     	
@@ -22,25 +22,25 @@
         
                 <dt><label for="name">Name:</label></dt>
                 
-                <dd><input type="text" name="name" /></dd>
+                <dd><input type="text" name="name" id="name" /></dd>
                 
                 <dt><label for="email">Email:</label></dt>
                 
-                <dd><input type="email" name="email" /></dd>
+                <dd><input type="email" name="email" id="email" /></dd>
                 
                 <dt><label for="comments">Comments:</label></dt>
                 
-                <dd><textarea rows=7 name="comments"></textarea></dd>            
+                <dd><textarea rows=7 name="comments" id="comments"></textarea></dd>            
             
             </dl>
             
-            <input type="submit" name="submit" class="admin-button" value="Submit" />
+            <input type="submit" id="contactSubmit" name="submit" class="admin-button" value="Submit" />
         
         </fieldset>
         
     </form>
     
-    <div class="success">
+    <div id="success">
         <h2 class="h2">Got it! We will get back to you soon.</h2>
     </div>
     
@@ -120,13 +120,13 @@ $(document).ready(function() {
         var email = $('#email').val();
         var comment = $('#comments').val();
         if( email == '' ){
-            $('#contactForm').append('<h3>Oops! You did not enter an E-mail Address.</h3>');
+            $('#contactForm').append("<h3 class='h3'>Oops! You did not enter an E-mail Address.</h3>");
         }
         else if( !Regex.test(email)){
-            $('#contactForm').append("<h3>Please enter a valid E-mail Address.</h3>");
+            $('#contactForm').append("<h3 class='h3'>Please enter a valid E-mail Address.</h3>");
         }
         else if(comment == ""){
-            $('#contactForm').append("<h3>Oops! You forgot to leave me a comment!");
+            $('#contactForm').append("<h3 class='h3'>Oops! You forgot to leave me a comment!");
         }
         else{
             //console.log(email +"  "+ comment);

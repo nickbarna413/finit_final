@@ -98,12 +98,12 @@ header .pinterest-icon {
   .main-nav li {
     line-height: 89px; }
 
-a, #search-submit, .form-submit {
+a, #search-submit, .form-submit, .admin-button {
   transition: opacity .12s ease-in-out;
   -moz-transition: opacity .12s ease-in-out;
   -webkit-transition: opacity .12s ease-in-out;
   text-decoration: none; }
-  a:hover, #search-submit:hover, .form-submit:hover {
+  a:hover, #search-submit:hover, .form-submit:hover,.admin-button:hover {
     opacity: .5; }
 
 .main-content .row article {
@@ -342,7 +342,9 @@ table {
   background-color: black;
   color: white;
   border: none;
-  padding: 1% 2%; }
+  padding: 1% 2%;
+  cursor: pointer;
+   }
 
 .margin {
   margin-top: 38px; }
