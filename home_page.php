@@ -46,7 +46,7 @@ if ( mysqli_connect_errno() ) {
 	<link rel="stylesheet" href="css/11cols.css" media="all">
 	<link rel="stylesheet" href="css/12cols.css" media="all">
 	<link rel="stylesheet" type="text/css" href="css/stylesHome.css">
-<link rel="stylesheet" href="css/test.scss">
+
 
 	<!-- Responsive Stylesheets-->
     <link rel="stylesheet" media="only screen and (max-width: 1280px) and (min-width: 1025px)" href="css/1280.css">
