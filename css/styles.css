@@ -440,3 +440,22 @@ h2.embiggen-more {
 	}
 
 /*# sourceMappingURL=styles.css.map */
+
+/* about edits comment out to switch back - jg */
+
+.member_info h3 {
+  font-size: 1.8em;
+  font-family: "PT Serif", serif;
+  padding-bottom: 10px;
+  border: none;
+}
+
+.member_info h3 span{
+  color: blue;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+
+.team_member {
+  padding-bottom: 20px;
+}
