@@ -209,8 +209,8 @@ include 'php/config.inc.php'; ?>
             
 			echo '<article class="col span_1_of_4">';
 			echo "<img  data-featherlight=\"#productBox"  . $row['product_id'] . "\"  src='"  . $row['product_thumb'] . "' alt='"  . $row['product_name'] . "' />";
-			echo "<h3 data-featherlight=\"#productBox" . $row['product_id'] . "\">" . $row['product_name'] . "</h3>";
-			echo "<span class=\"price\">$" . $row['product_price'] . ".99/3</span>";
+			echo "<h2 class='h2' data-featherlight=\"#productBox" . $row['product_id'] . "\">" . $row['product_name'] . "</h2>";
+			echo "<span class=\"price\">$" . $row['product_price'] . "/3</span>";
 			echo "<div>
 				 ".$product_rating."
 			      
@@ -255,13 +255,13 @@ while($row = mysqli_fetch_array($result)) {
     
  	 echo "<article class=\"lightbox\" id=\"productBox"  . $product_id . "\">";
       	
-		echo "<h2>" . $product_name . "</h2>";
+		echo "<h2 class='h2'>" . $product_name . "</h2>";
 	  	
 		echo "<img src=\"" . $product_thumb . "\" alt=\"Socks\" />";
 		
 		echo "<ul>";
 		
-			echo "<li class=\"price\">$" . $product_price . ".99/3</li>";
+			echo "<li class=\"price\">$" . $product_price . "/3</li>";
 			
 			echo "<li class=\"alignLeft\">" . $product_description . "</li>";
 			
@@ -272,7 +272,7 @@ while($row = mysqli_fetch_array($result)) {
 		echo "</ul>";
 					
 			
-			echo "<a href=\"save_to_cart.php?ProductID=".$product_id."\" class=\"cartSubmit\" />Add to Cart</a>";
+			echo "<a href=\"save_to_cart.php?ProductID=".$product_id."\" class='admin-button embiggen cart-submit' />Add to Cart</a>";
 			
 
 	  

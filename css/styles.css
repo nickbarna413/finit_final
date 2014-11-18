@@ -480,3 +480,7 @@ h2.embiggen-more {
 .help-block {
 	margin-bottom: 18px; display: block;
 }
+
+.cart-submit {
+	margin-top: 18px; display: inline-block;
+}
