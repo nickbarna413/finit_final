@@ -1,9 +1,9 @@
 <?php
 
-    $server = "localhost";
-    $login = "root";
+    $server = "sulley.cah.ucf.edu";
+    $login = "el663147";
     $pass = "root";
-    $db_name = "finit";
+    $db_name = "el663147";
     
 
     $mysqli = mysqli_connect($server, $login, $pass, $db_name);

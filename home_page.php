@@ -4,21 +4,20 @@
 <?php
 
 // Check connection
-if (mysqli_connect_errno()) {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-}
+if ( mysqli_connect_errno() ) {
+      echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    }
 
-$result = mysqli_query($con,"SELECT * FROM products WHERE id = '3'");
+    $result = mysqli_query($con,"SELECT * FROM products WHERE id = '3'");
 
 
-mysqli_close($con);
+    mysqli_close($con);
 ?> 
 <!DOCTYPE html>
 
 <head>
 
 	<meta charset="utf-8">
-
 
 	<title>Finit Home</title>
 	<meta name="description" content="This is the Responsive Grid System, a quick, easy and flexible way to create a responsive web site.">
