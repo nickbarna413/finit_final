@@ -14,6 +14,11 @@
 
 <?php 
 
+
+if(preg_match("/^[A-Za-z]+/", $_GET['search_results'])) { 
+	
+
+
 $result = mysqli_query($mysqli,"SELECT * FROM product WHERE name LIKE '%$_GET[search_results]%'");
 
 
@@ -24,8 +29,15 @@ $result = mysqli_query($mysqli,"SELECT * FROM product WHERE name LIKE '%$_GET[se
 	echo "<p>" . $ser['description'] . "</p>";
 	echo "<span class='h3'>" . $ser['price'] . "</span>";
 	echo "</article>";
-}
+	}
+	
+} else if (!$_GET['search_results']) {
+	print "<h2 class='h2'>You didn't search for anything...</h2>";
 
+} else {
+	print "<h2 class='h2 red'>You're doing evil things and should be ashamed</h2>";
+	
+}
 ?>
 
 </main>	<!--end of wrapper-->
