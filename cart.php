@@ -7,10 +7,10 @@ if (mysqli_connect_errno()) {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-$result = mysqli_query($con,"SELECT * FROM products WHERE id = '3'");
+$result = mysqli_query($mysqli,"SELECT * FROM products WHERE id = '3'");
 
 
-mysqli_close($con);
+mysqli_close($mysqli);
 ?> 
 
 <?php include 'includes/head.php' ?>
