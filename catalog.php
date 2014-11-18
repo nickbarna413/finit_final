@@ -1,7 +1,5 @@
-<?php session_start();
-include 'php/config.inc.php'; ?>
-
 <?php include 'includes/head.php' ?>
+<?php include 'php/config.inc.php'; ?>
  
 <body id="cart"> 
  
